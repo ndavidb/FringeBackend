@@ -1,0 +1,28 @@
+@Fringe.API_HostAddress = https://localhost:44319
+
+### Get Roles
+GET {{Fringe.API_HostAddress}}/api/roles
+Accept: application/json
+
+### Get Role by ID
+GET {{Fringe.API_HostAddress}}/api/roles/1
+Accept: application/json
+
+### Auth - Login
+POST {{Fringe.API_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "yourpassword"
+}
+
+### Auth - Register
+POST {{Fringe.API_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "email": "newuser@example.com",
+  "password": "newpassword"
+}
